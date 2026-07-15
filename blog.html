@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Constructo</title>
+<meta name="description" content="Field notes on construction safety, materials, planning and project delivery from the Constructo team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="container">
+    <div class="logo-slot">
+      <a href="index.html"><img src="logo (1).webp" alt="Constructo logo" loading="eager"></a>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="btn btn-primary nav-cta-mobile">Get a Quote</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="login.html" class="btn btn-ghost">Get a Quote</a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="tape-measure" aria-hidden="true">
+  <div class="track"><div class="ticks"></div><div class="fill"></div><div class="marker"></div></div>
+</div>
+
+<main>
+
+  <!-- 1. BANNER -->
+  <section class="page-banner">
+    <div class="hero-media"><img src="blog-site-safety.webp" alt="" width="900" height="600"></div>
+    <div class="container">
+      <span class="crumb">Home / Blog</span>
+      <h1 class="split-heading"><span class="word"><span>Field Notes</span></span></h1>
+      <p class="hero-sub" style="margin-top:1rem;">Safety practices, material trends and project-planning lessons from our crews and engineers.</p>
+    </div>
+  </section>
+
+  <!-- 2. FEATURED POST -->
+  <section class="section on-light">
+    <div class="container intro-grid">
+      <div class="intro-media reveal-up">
+        <div class="frame"><img src="webp6.webp" alt="Site safety briefing on a construction site" width="900" height="600"></div>
+        <div class="tag"><small>Featured</small>05.12</div>
+      </div>
+      <div>
+        <span class="eyebrow">Safety</span>
+        <h2 style="font-size:clamp(1.8rem,3.6vw,2.8rem);margin-bottom:1.2rem;">5 site-safety habits that prevent 90% of incidents</h2>
+        <p>Most site injuries trace back to a small set of preventable habits: skipped toolbox talks, unmarked hazards and rushed housekeeping. Here's what our superintendents check on every walk-through, and how a five-minute daily habit cut our incident rate to nearly zero.</p>
+        <a href="#post-1" class="btn btn-ghost mt-lg" style="color:var(--navy-900);border-color:var(--navy-900);">Read the full article</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="hazard"></div>
+
+  <!-- 3. FILTER + GRID -->
+  <section class="section on-concrete" id="articles">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">All articles</span>
+        <h2>Notes from the field.</h2>
+      </div>
+      <div class="project-filter">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="commercial">Safety</button>
+        <button data-filter="industrial">Materials</button>
+        <button data-filter="civic">Planning</button>
+      </div>
+      <div class="blog-grid reveal-group">
+        <a class="blog-card" href="#post-1" id="post-1">
+          <div class="blog-thumb"><img src="webp7.webp" alt="Site safety briefing" width="900" height="600"></div>
+          <div class="blog-body"><div class="blog-meta"><span>Safety</span><span>May 12</span></div><h3>5 site-safety habits that prevent 90% of incidents</h3><span class="read">Read article</span></div>
+        </a>
+        <a class="blog-card" href="#post-2" id="post-2">
+          <div class="blog-thumb"><img src="webp8.webp" alt="Construction material trends" width="900" height="600"></div>
+          <div class="blog-body"><div class="blog-meta"><span>Materials</span><span>Apr 28</span></div><h3>Material trends shaping commercial builds this year</h3><span class="read">Read article</span></div>
+        </a>
+        <a class="blog-card" href="#post-3" id="post-3">
+          <div class="blog-thumb"><img src="webp9.webp" alt="Project planning session" width="900" height="600"></div>
+          <div class="blog-body"><div class="blog-meta"><span>Planning</span><span>Apr 09</span></div><h3>How fixed-price estimating actually protects your budget</h3><span class="read">Read article</span></div>
+        </a>
+        <a class="blog-card" href="#post-4">
+          <div class="blog-thumb"><img src="webp10.webp" alt="Industrial warehouse construction" width="900" height="680"></div>
+          <div class="blog-body"><div class="blog-meta"><span>Materials</span><span>Mar 22</span></div><h3>Choosing steel vs. heavy-timber framing for warehouses</h3><span class="read">Read article</span></div>
+        </a>
+        <a class="blog-card" href="#post-5">
+          <div class="blog-thumb"><img src="webp1.webp" alt="Civic center construction" width="900" height="680"></div>
+          <div class="blog-body"><div class="blog-meta"><span>Planning</span><span>Mar 04</span></div><h3>Permitting timelines: what to budget for on civic projects</h3><span class="read">Read article</span></div>
+        </a>
+        <a class="blog-card" href="#post-6">
+          <div class="blog-thumb"><img src="webp3.webp" alt="High rise commercial tower" width="900" height="680"></div>
+          <div class="blog-body"><div class="blog-meta"><span>Safety</span><span>Feb 18</span></div><h3>Working at height: the checklist we run above 4 storeys</h3><span class="read">Read article</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. WHY FOLLOW / FEATURES -->
+  <section class="section on-dark">
+    <div class="container">
+      <div class="section-head on-dark">
+        <span class="eyebrow">Why we write</span>
+        <h2>Straight from the people on site.</h2>
+      </div>
+      <div class="feature-row reveal-group" style="color:var(--paper);">
+        <div class="feature" style="border-top-color:var(--amber);"><span class="fnum">01</span><h3>Written by tradespeople</h3><p style="color:var(--concrete-dim);">Every article is reviewed by the superintendent or engineer who lived it.</p></div>
+        <div class="feature" style="border-top-color:var(--amber);"><span class="fnum">02</span><h3>No vendor spin</h3><p style="color:var(--concrete-dim);">We name what worked and what didn't, materials included.</p></div>
+        <div class="feature" style="border-top-color:var(--amber);"><span class="fnum">03</span><h3>Practical checklists</h3><p style="color:var(--concrete-dim);">Take the same site checklists we use, no signup required.</p></div>
+        <div class="feature" style="border-top-color:var(--amber);"><span class="fnum">04</span><h3>Updated monthly</h3><p style="color:var(--concrete-dim);">New posts as codes, materials and equipment change.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. STATS -->
+  <section class="on-navy2">
+    <div class="stats-band">
+      <div class="stat-block"><div class="count" data-count="86" data-suffix="">0</div><div class="label">Articles Published</div></div>
+      <div class="stat-block"><div class="count" data-count="12" data-suffix="k+">0</div><div class="label">Monthly Readers</div></div>
+      <div class="stat-block"><div class="count" data-count="4" data-suffix="">0</div><div class="label">Topics Covered</div></div>
+      <div class="stat-block"><div class="count" data-count="18" data-suffix="">0</div><div class="label">Contributing Staff</div></div>
+    </div>
+  </section>
+
+  <!-- 6. NEWSLETTER -->
+  <section class="section on-concrete">
+    <div class="container grid-2">
+      <div class="reveal-up">
+        <span class="eyebrow">Stay updated</span>
+        <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:1rem;">Get new articles by email.</h2>
+        <p>One email a month — no sales pitches, just the checklists and lessons our crews are using on active sites.</p>
+      </div>
+      <form class="reveal-up" style="display:flex;gap:.8rem;align-items:flex-start;flex-wrap:wrap;" onsubmit="event.preventDefault(); this.querySelector('.form-status').textContent='Thanks — check your inbox to confirm.';">
+        <div class="field" style="flex:1;min-width:220px;">
+          <label for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" required placeholder="you@company.com">
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:1.9rem;">Subscribe</button>
+        <p class="form-status" style="width:100%;font-family:var(--font-mono);font-size:.8rem;color:var(--steel);"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- 7. POPULAR POSTS -->
+  <section class="section on-light">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Most read</span>
+        <h2>Readers' favorites this quarter.</h2>
+      </div>
+      <div class="project-grid reveal-group">
+        <a class="project-card" href="#post-1">
+          <img src="webp4.webp" alt="Site safety briefing" width="900" height="600">
+          <div class="project-overlay"><span class="cat">Safety</span><h3>5 site-safety habits</h3><span class="view">Read more</span></div>
+        </a>
+        <a class="project-card" href="#post-4">
+          <img src="webp3.webp" alt="Industrial warehouse construction" width="900" height="680">
+          <div class="project-overlay"><span class="cat">Materials</span><h3>Steel vs. heavy timber</h3><span class="view">Read more</span></div>
+        </a>
+        <a class="project-card" href="#post-6">
+          <img src="webp1.webp" alt="High rise commercial tower" width="900" height="680">
+          <div class="project-overlay"><span class="cat">Safety</span><h3>Working at height checklist</h3><span class="view">Read more</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. TESTIMONIALS -->
+  <section class="section on-concrete">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Reader feedback</span>
+        <h2>What our readers say.</h2>
+      </div>
+      <div class="testi-track">
+        <article class="testi-card">
+          <span class="quote-mark">"</span>
+          <p>The safety checklist series is now printed and posted in our own site trailer. Genuinely useful, not marketing fluff.</p>
+          <div class="testi-person"><div class="avatar"> </div><div><div class="name">Priya Nair</div><div class="role">Safety Officer, reader</div></div></div>
+        </article>
+        <article class="testi-card">
+          <span class="quote-mark">"</span>
+          <p>Their material comparison articles saved us weeks of vendor research on our last warehouse build.</p>
+          <div class="testi-person"><div class="avatar"> </div><div><div class="name">Helena Brandt</div><div class="role">Architect, reader</div></div></div>
+        </article>
+      </div>
+      <div class="testi-nav"><button class="testi-prev" aria-label="Previous testimonial">Prev</button><button class="testi-next" aria-label="Next testimonial">Next</button></div>
+    </div>
+  </section>
+
+  <!-- 9 & 10. CTA -->
+  <section class="cta-band">
+    <div class="hero-media"><img src="webp10.webp" alt="" width="1200" height="800"></div>
+    <div class="container cta-inner">
+      <h2>Ready to put these lessons to work?</h2>
+      <a href="404error.html" class="btn btn-primary" style="background:var(--navy-900);color:var(--paper);">Request a quote</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-col footer-logo">
+      <div class="logo-slot">
+        <img src="logo (1).webp" alt="Constructo logo" loading="eager">
+      </div>
+      <p>Building commercial, industrial and residential projects since 2007.</p>
+    </div>
+    <div class="footer-col"><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Services</h4><ul>
+      <li><a href="404error.html">General Contracting</a></li><li><a href="404error.html">Commercial Building</a></li><li><a href="404error.html">Industrial &amp; Warehousing</a></li><li><a href="404error.html">Renovation</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li>221 Foundry Lane, Bengaluru</li><li>hello@constructo.example</li><li>+91 98765 43210</li>
+    </ul>
+      <div class="social-row mt-lg"><a href="404error.html" aria-label="LinkedIn">in</a><a href="404error.html" aria-label="Instagram">ig</a><a href="404error.html" aria-label="X">x</a></div>
+    </div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 Constructo.</span><span><a href="404error.html">Privacy Policy</a></span></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
