@@ -28,6 +28,17 @@
   @media (prefers-reduced-motion: reduce){*{animation-duration:.01ms !important;transition-duration:.01ms !important;}}
   a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--amber);outline-offset:3px;}
 
+  .page-back{
+    position:fixed;top:.85rem;left:.85rem;z-index:20;
+    display:inline-flex;align-items:center;gap:.35rem;
+    padding:.5rem .78rem;border:1px solid rgba(11,32,54,.14);border-radius:999px;
+    background:rgba(247,245,240,.95);color:var(--navy-900);
+    font-family:var(--font-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;
+    box-shadow:0 8px 18px rgba(11,32,54,.12);backdrop-filter:blur(6px);
+    transition:transform .25s var(--ease), background .25s ease, border-color .25s ease;
+  }
+  .page-back:hover{transform:translateY(-1px);background:var(--amber);border-color:var(--amber);}
+
   .wrap{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;}
 
   /* ---- brand side ---- */
@@ -43,10 +54,10 @@
   }
   .brand-side > *{position:relative;z-index:2;}
   .logo-slot{
-    width:168px;height:44px;border:1.5px dashed rgba(255,255,255,.35);border-radius:4px;
+    width:140px;height:40px;border:1.5px dashed rgba(255,255,255,.35);border-radius:4px;
     display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);
     font-size:.65rem;letter-spacing:.1em;color:rgba(255,255,255,.45);text-transform:uppercase;
-    overflow:hidden;
+    overflow:hidden;margin-top:2.2rem;
   }
   .logo-slot img{max-width:100%;max-height:100%;height:auto;width:auto;object-fit:contain;}
   .brand-quote{max-width:440px;}
@@ -123,14 +134,19 @@
     .brand-side{min-height:280px;padding:2rem;}
     .brand-quote,.brand-stats{display:none;}
   }
+  @media (max-width:560px){
+    .form-side{padding-top:4.5rem;}
+  }
 </style>
 </head>
 <body>
 
+<a href="index.html" class="page-back">Back</a>
+
 <div class="wrap">
 
   <section class="brand-side">
-    <div class="logo-slot"><a href="index.html"><img src="logo (1).webp" alt="Constructo logo" loading="eager"></a></div>
+    <div class="logo-slot"><a href="index.html"><img src="logo-dark-themed.webp" alt="Constructo logo" loading="eager"></a></div>
     <div class="brand-quote reveal">
       <span class="mark">"</span>
       <p>The budget we signed at kickoff is the budget we closed with — no surprises, no change-order games.</p>
@@ -145,7 +161,6 @@
 
   <section class="form-side">
     <div class="form-card">
-      <div class="top-link reveal">New here? <a href=" createaccount.html" style="margin-left:.4rem;">Create an account</a></div>
       <span class="eyebrow reveal">Welcome back</span>
       <h1 class="reveal">Log in to your account</h1>
       <p class="reveal">Track live projects, estimates and site reports in one place.</p>

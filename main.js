@@ -219,6 +219,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".contact-form");
   if (form) {
     form.addEventListener("submit", e => {
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
       e.preventDefault();
       const status = form.querySelector(".form-status");
       status.textContent = "Sending your message...";

@@ -26,6 +26,17 @@
   @media (prefers-reduced-motion: reduce){*{animation-duration:.01ms !important;transition-duration:.01ms !important;}}
   a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--amber);outline-offset:3px;}
 
+  .page-back{
+    position:fixed;top:.85rem;left:.85rem;z-index:20;
+    display:inline-flex;align-items:center;gap:.35rem;
+    padding:.5rem .78rem;border:1px solid rgba(11,32,54,.14);border-radius:999px;
+    background:rgba(247,245,240,.95);color:var(--navy-900);
+    font-family:var(--font-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;
+    box-shadow:0 8px 18px rgba(11,32,54,.12);backdrop-filter:blur(6px);
+    transition:transform .25s var(--ease), background .25s ease, border-color .25s ease;
+  }
+  .page-back:hover{transform:translateY(-1px);background:var(--amber);border-color:var(--amber);}
+
   .wrap{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;}
 
   .form-side{display:flex;align-items:center;justify-content:center;padding:clamp(2rem,4vw,4rem);order:1;}
@@ -44,7 +55,7 @@
     width:168px;height:44px;border:1.5px dashed rgba(255,255,255,.35);border-radius:4px;
     display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);
     font-size:.65rem;letter-spacing:.1em;color:rgba(255,255,255,.45);text-transform:uppercase;
-    overflow:hidden;
+    overflow:hidden;margin-top:2.2rem;
   }
   .logo-slot img{max-width:100%;max-height:100%;height:auto;width:auto;object-fit:contain;}
   .brand-copy{max-width:440px;}
@@ -127,11 +138,12 @@
 </head>
 <body>
 
+<a href="index.html" class="page-back">Back</a>
+
 <div class="wrap">
 
   <section class="form-side">
     <div class="form-card">
-      <div class="top-link reveal">Already registered? <a href="login.html" style="margin-left:.4rem;">Log in</a></div>
       <span class="eyebrow reveal">Get started</span>
       <h1 class="reveal">Create your account</h1>
       <p class="sub reveal">Free for clients and partners — track estimates, schedules and site reports in one dashboard.</p>
@@ -169,13 +181,16 @@
 
         <div class="field reveal" id="confirmField">
           <label for="confirm">Confirm password</label>
-          <input type="password" id="confirm" name="confirm" required placeholder="Re-enter password" autocomplete="new-password">
+          <div class="input-wrap">
+            <input type="password" id="confirm" name="confirm" required placeholder="Re-enter password" autocomplete="new-password">
+            <button type="button" class="toggle-pass" id="toggleConfirm">Show</button>
+          </div>
           <div class="err-msg">Passwords don't match.</div>
         </div>
 
         <label class="terms reveal">
           <input type="checkbox" id="terms" name="terms" required>
-          <span>I agree to Constructo's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</span>
+          <span>I agree to Constructo's <a href="404error.html">Terms of Service</a> and <a href="404error.html">Privacy Policy</a>.</span>
         </label>
 
         <button type="submit" class="btn" id="signupBtn">
@@ -189,7 +204,7 @@
   </section>
 
   <section class="brand-side">
-    <div class="logo-slot"><a href="index.html"><img src="logo (1).webp" alt="Constructo logo" loading="eager"></a></div>
+    <div class="logo-slot"><a href="index.html"><img src="logo-dark-themed.webp" alt="Constructo logo" loading="eager"></a></div>
     <div class="brand-copy reveal">
       <span class="eyebrow">Why join Constructo</span>
       <h2>One dashboard for every phase of your build.</h2>
@@ -220,10 +235,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const passInput = document.getElementById("password");
   const confirmInput = document.getElementById("confirm");
   const togglePass = document.getElementById("togglePass");
+  const toggleConfirm = document.getElementById("toggleConfirm");
+
   togglePass.addEventListener("click", () => {
     const show = passInput.type === "password";
     passInput.type = show ? "text" : "password";
     togglePass.textContent = show ? "Hide" : "Show";
+  });
+
+  toggleConfirm.addEventListener("click", () => {
+    const show = confirmInput.type === "password";
+    confirmInput.type = show ? "text" : "password";
+    toggleConfirm.textContent = show ? "Hide" : "Show";
   });
 
   const strengthFill = document.getElementById("strengthFill");
@@ -266,13 +289,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function validate(){
     let ok = true;
-    if (!nameInput.value.trim()) { nameField.classList.add("error"); ok = false; } else nameField.classList.remove("error");
+    const nameOk = /^[A-Za-z\s]+$/.test(nameInput.value.trim()) && nameInput.value.trim().length >= 2;
+    nameField.classList.toggle("error", !nameOk); if (!nameOk) ok = false;
+
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim());
     emailField.classList.toggle("error", !emailOk); if (!emailOk) ok = false;
+
     const passOk = passInput.value.length >= 8;
     passField.classList.toggle("error", !passOk); if (!passOk) ok = false;
+
     const matchOk = confirmInput.value === passInput.value && confirmInput.value.length > 0;
     confirmField.classList.toggle("error", !matchOk); if (!matchOk) ok = false;
+
     if (!termsInput.checked) ok = false;
     return ok;
   }
@@ -289,10 +317,9 @@ document.addEventListener("DOMContentLoaded", () => {
     status.textContent = "Creating your account...";
     status.classList.remove("success");
     setTimeout(() => {
-      status.textContent = "Account created — redirecting to your dashboard...";
+      status.textContent = "Account created — redirecting to login...";
       status.classList.add("success");
-      setTimeout(() => { window.location.href = "dashboard.html"; }, 700);
-    }, 1200);
+      setTimeout(() => { window.location.href = "login.html"; }, 700);
   });
 
 });

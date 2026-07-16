@@ -14,7 +14,7 @@
 <header class="site-nav">
   <div class="container">
     <div class="logo-slot">
-      <a href="index.html"><img src="logo (1).webp" alt="Constructo logo" loading="eager"></a>
+      <a href="index.html"><img src="logo-dark-themed.webp" alt="Constructo logo" loading="eager"></a>
     </div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
@@ -41,7 +41,7 @@
   <section class="page-banner">
     <div class="hero-media"><img src="blog-site-safety.webp" alt="" width="900" height="600"></div>
     <div class="container">
-      <span class="crumb">Home / Blog</span>
+      <span class="crumb">/ Blog</span>
       <h1 class="split-heading"><span class="word"><span>Field Notes</span></span></h1>
       <p class="hero-sub" style="margin-top:1rem;">Safety practices, material trends and project-planning lessons from our crews and engineers.</p>
     </div>
@@ -79,27 +79,27 @@
         <button data-filter="civic">Planning</button>
       </div>
       <div class="blog-grid reveal-group">
-        <a class="blog-card" href="#post-1" id="post-1">
+        <a class="blog-card" href="404error.html" id="post-1">
           <div class="blog-thumb"><img src="webp7.webp" alt="Site safety briefing" width="900" height="600"></div>
           <div class="blog-body"><div class="blog-meta"><span>Safety</span><span>May 12</span></div><h3>5 site-safety habits that prevent 90% of incidents</h3><span class="read">Read article</span></div>
         </a>
-        <a class="blog-card" href="#post-2" id="post-2">
+        <a class="blog-card" href="404error.html" id="post-2">
           <div class="blog-thumb"><img src="webp8.webp" alt="Construction material trends" width="900" height="600"></div>
           <div class="blog-body"><div class="blog-meta"><span>Materials</span><span>Apr 28</span></div><h3>Material trends shaping commercial builds this year</h3><span class="read">Read article</span></div>
         </a>
-        <a class="blog-card" href="#post-3" id="post-3">
+        <a class="blog-card" href="404error.html" id="post-3">
           <div class="blog-thumb"><img src="webp9.webp" alt="Project planning session" width="900" height="600"></div>
           <div class="blog-body"><div class="blog-meta"><span>Planning</span><span>Apr 09</span></div><h3>How fixed-price estimating actually protects your budget</h3><span class="read">Read article</span></div>
         </a>
-        <a class="blog-card" href="#post-4">
+        <a class="blog-card" href="404error.html">
           <div class="blog-thumb"><img src="webp10.webp" alt="Industrial warehouse construction" width="900" height="680"></div>
           <div class="blog-body"><div class="blog-meta"><span>Materials</span><span>Mar 22</span></div><h3>Choosing steel vs. heavy-timber framing for warehouses</h3><span class="read">Read article</span></div>
         </a>
-        <a class="blog-card" href="#post-5">
+        <a class="blog-card" href="404error.html">
           <div class="blog-thumb"><img src="webp1.webp" alt="Civic center construction" width="900" height="680"></div>
           <div class="blog-body"><div class="blog-meta"><span>Planning</span><span>Mar 04</span></div><h3>Permitting timelines: what to budget for on civic projects</h3><span class="read">Read article</span></div>
         </a>
-        <a class="blog-card" href="#post-6">
+        <a class="blog-card" href="404error.html">
           <div class="blog-thumb"><img src="webp3.webp" alt="High rise commercial tower" width="900" height="680"></div>
           <div class="blog-body"><div class="blog-meta"><span>Safety</span><span>Feb 18</span></div><h3>Working at height: the checklist we run above 4 storeys</h3><span class="read">Read article</span></div>
         </a>
@@ -141,7 +141,7 @@
         <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:1rem;">Get new articles by email.</h2>
         <p>One email a month — no sales pitches, just the checklists and lessons our crews are using on active sites.</p>
       </div>
-      <form class="reveal-up" style="display:flex;gap:.8rem;align-items:flex-start;flex-wrap:wrap;" onsubmit="event.preventDefault(); this.querySelector('.form-status').textContent='Thanks — check your inbox to confirm.';">
+      <form class="reveal-up" style="display:flex;gap:.8rem;align-items:flex-start;flex-wrap:wrap;" onsubmit="event.preventDefault(); const status = this.querySelector('.form-status'); status.textContent='Thanks — check your inbox to confirm.'; clearTimeout(window.__constructoNewsletterTimer); window.__constructoNewsletterTimer = setTimeout(() => { status.textContent=''; }, 2000);">
         <div class="field" style="flex:1;min-width:220px;">
           <label for="newsletter-email">Email address</label>
           <input type="email" id="newsletter-email" required placeholder="you@company.com">
@@ -160,15 +160,15 @@
         <h2>Readers' favorites this quarter.</h2>
       </div>
       <div class="project-grid reveal-group">
-        <a class="project-card" href="#post-1">
+        <a class="project-card" href="404error.html" id="post-5">
           <img src="webp4.webp" alt="Site safety briefing" width="900" height="600">
           <div class="project-overlay"><span class="cat">Safety</span><h3>5 site-safety habits</h3><span class="view">Read more</span></div>
         </a>
-        <a class="project-card" href="#post-4">
+        <a class="project-card" href="404error.html" id="post-4">
           <img src="webp3.webp" alt="Industrial warehouse construction" width="900" height="680">
           <div class="project-overlay"><span class="cat">Materials</span><h3>Steel vs. heavy timber</h3><span class="view">Read more</span></div>
         </a>
-        <a class="project-card" href="#post-6">
+        <a class="project-card" href="404error.html" id="post-6">
           <img src="webp1.webp" alt="High rise commercial tower" width="900" height="680">
           <div class="project-overlay"><span class="cat">Safety</span><h3>Working at height checklist</h3><span class="view">Read more</span></div>
         </a>
@@ -195,7 +195,7 @@
           <div class="testi-person"><div class="avatar"> </div><div><div class="name">Helena Brandt</div><div class="role">Architect, reader</div></div></div>
         </article>
       </div>
-      <div class="testi-nav"><button class="testi-prev" aria-label="Previous testimonial">Prev</button><button class="testi-next" aria-label="Next testimonial">Next</button></div>
+      <!-- <div class="testi-nav"><button class="testi-prev" aria-label="Previous testimonial">Prev</button><button class="testi-next" aria-label="Next testimonial">Next</button></div> -->
     </div>
   </section>
 
@@ -214,7 +214,7 @@
   <div class="container footer-top">
     <div class="footer-col footer-logo">
       <div class="logo-slot">
-        <img src="logo (1).webp" alt="Constructo logo" loading="eager">
+        <img src="logo-dark-themed.webp" alt="Constructo logo" loading="eager">
       </div>
       <p>Building commercial, industrial and residential projects since 2007.</p>
     </div>
@@ -224,8 +224,8 @@
     <div class="footer-col"><h4>Services</h4><ul>
       <li><a href="404error.html">General Contracting</a></li><li><a href="404error.html">Commercial Building</a></li><li><a href="404error.html">Industrial &amp; Warehousing</a></li><li><a href="404error.html">Renovation</a></li>
     </ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul>
-      <li>221 Foundry Lane, Bengaluru</li><li>hello@constructo.example</li><li>+91 98765 43210</li>
+      <div class="footer-col"><h4>Contact</h4><ul class="footer-contact-list">
+      <li><span class="footer-contact-icon" aria-hidden="true">📍</span><span>221 Foundry Lane, Bengaluru</span></li><li><span class="footer-contact-icon" aria-hidden="true">✉</span><a href="mailto:hello@constructo.example">hello@constructo.example</a></li><li><span class="footer-contact-icon" aria-hidden="true">☎</span><a href="tel:+919876543210">+91 98765 43210</a></li>
     </ul>
       <div class="social-row mt-lg"><a href="404error.html" aria-label="LinkedIn">in</a><a href="404error.html" aria-label="Instagram">ig</a><a href="404error.html" aria-label="X">x</a></div>
     </div>
