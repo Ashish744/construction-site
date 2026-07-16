@@ -151,7 +151,7 @@
         <div class="form-row">
           <div class="field reveal" id="nameField">
             <label for="fullname">Full name</label>
-            <input type="text" id="fullname" name="fullname" required minlength="2" pattern="[A-Za-z\s]+" placeholder="Jordan Blake" autocomplete="name">
+            <input type="text" id="fullname" name="fullname" required minlength="2" pattern="^[A-Za-z\s]+$" placeholder="Jordan Blake" autocomplete="name">
             <div class="err-msg">Enter your full name.</div>
           </div>
           <div class="field reveal" id="emailField">
@@ -236,6 +236,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmInput = document.getElementById("confirm");
   const togglePass = document.getElementById("togglePass");
   const toggleConfirm = document.getElementById("toggleConfirm");
+  const nameInput = document.getElementById("fullname");
+
+  nameInput.addEventListener("input", () => {
+    nameInput.value = nameInput.value.replace(/[^A-Za-z\s]/g, "");
+  });
 
   togglePass.addEventListener("click", () => {
     const show = passInput.type === "password";
@@ -283,7 +288,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailField = document.getElementById("emailField");
   const passField = document.getElementById("passField");
   const confirmField = document.getElementById("confirmField");
-  const nameInput = document.getElementById("fullname");
   const emailInput = document.getElementById("email");
   const termsInput = document.getElementById("terms");
 
@@ -312,16 +316,21 @@ document.addEventListener("DOMContentLoaded", () => {
       status.classList.remove("success");
       return;
     }
+
     btn.classList.add("loading");
     btn.disabled = true;
     status.textContent = "Creating your account...";
     status.classList.remove("success");
+
     setTimeout(() => {
       status.textContent = "Account created — redirecting to login...";
       status.classList.add("success");
-      setTimeout(() => { window.location.href = "login.html"; }, 700);
-  });
 
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 700);
+    }, 700);
+  });
 });
 </script>
 </body>
