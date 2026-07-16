@@ -1102,6 +1102,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .process-track{grid-template-columns:1fr 1fr;gap:2rem 1.2rem;}
   .process-track::before{display:none;}
 
+  .grid-2{grid-template-columns:1fr;}
   .blog-grid{grid-template-columns:1fr;}
 
   .testi-card{width:88vw;padding:1.8rem;}
